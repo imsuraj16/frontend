@@ -12,7 +12,10 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.10",
+    "@zegocloud/zego-uikit-prebuilt": "^2.15.0",
     "axios": "^1.10.0",
+    "jsrsasign": "^11.1.0",
+    "lucide-react": "^0.523.0",
     "nanoid": "^5.1.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

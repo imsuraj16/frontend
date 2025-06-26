@@ -10,6 +10,8 @@ import Userdetails from "../pages/Userdetails";
 import Users from "../pages/Users";
 import Pagenotfound from "../pages/Pagenotfound";
 import Authwrapper from "./Authwrapper";
+import Requests from "../pages/Requests";
+import Meeting from "../pages/Meeting";
 
 const Mainroutes = () => {
   return (
@@ -34,6 +36,23 @@ const Mainroutes = () => {
           </Authwrapper>
         }
       />
+      <Route
+        path="/requests"
+        element={
+          <Authwrapper>
+            <Requests />
+          </Authwrapper>
+        }
+      />
+      <Route
+        path="/meeting/:roomId"
+        element={
+          <Authwrapper>
+            <Meeting />
+          </Authwrapper>
+        }
+      />
+      
       <Route path="/Users" element={<Users />} />
       <Route path="/user/:id" element={<Userdetails />} />
       <Route path="*" element = {<Pagenotfound/>}/>
