@@ -15,17 +15,17 @@ const randomID = (len = 5) => {
 };
 
 const Meeting = () => {
-  const { roomId } = useParams();            // ➜ /meeting/:roomId से आया
+  const { roomId } = useParams();            // ➜ /meeting/:roomId 
   const containerRef = useRef(null);
 
   useEffect(() => {
-    if (!roomId) return;                     // safety guard
+    if (!roomId) return;              
 
     /* ------------------------------------------------------------------
        1️⃣  App credentials  (replace with your own)
     ------------------------------------------------------------------ */
-    const appID = 2094739522 ;
-    const serverSecret = "a6c45cdbbd073519c5dd51218eecba12";
+    const appID = Number(import.meta.env.VITE_ZEGO_APP_ID);
+    const serverSecret = import.meta.env.VITE_ZEGO_SERVER_SECRET;
 
     /* ------------------------------------------------------------------
        2️⃣  Unique user info  (could come from your auth state)
